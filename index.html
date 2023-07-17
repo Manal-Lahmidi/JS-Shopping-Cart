@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>js Shopping Cart</title>
+
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+      <link rel="manifest" href="/site.webmanifest">
+      <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Google Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Karla:wght@200;300;400;500&family=Montserrat+Alternates:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400;500&family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+
+      <!-- Bootstrap CSS-->	
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+      <!-- External CSS -->
+      <link rel="stylesheet" type="text/css" href="styles.css">
+
+      <!-- FontAwsome -->
+      <script src="https://kit.fontawesome.com/9d9796826b.js" crossorigin="anonymous"></script>
+  
+  </head>
+
+  <body>
+
+    <!-- Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    <!-- Heading -->
+    <div>
+    <nav class="navbar fixed-top bg-light">
+        <div class="container-fluid">
+          <a href="index.html" class="navbar-brand" >
+            <img src="images/logo.png" style="float: left; height: 3em; width: 3em;" alt="logo">
+            <h4 style="padding-left: 1em; padding-top: 6%;float: left;">Manal & Rach</h4>
+          </a>
+
+          <a href="#shopping-cart" style="color: rgb(38, 106, 203);"> <i style="margin-right: 1%;" class="fa-solid fa-cart-shopping justify-content-end fa-xl" ></i></a>
+        
+        </div>
+      </nav>
+
+    <!-- Item Categories -->
+    <section id="category">
+      <div class="container-fluid">
+        <div class="row row-cols-2 row-cols-md-4 g-4">
+          <div class=" col">
+            <div class="card">
+              <img src="images/dress.png" class="card-img-top" alt="dress">
+              <div class="card-overlay">
+                <h2>Dresses</h2>
+              </div>
+            </div>
+          </div>
+
+          <div class=" col">
+            <div class="card">
+              <img src="images/tops.png" class="card-img-top" alt="top">
+              <div class="card-overlay">
+                <h2>Tops</h2>
+              </div>
+            </div>
+          </div>
+
+          <div class=" col">
+            <div class="card">
+              <img src="images/T-shirt.png" class="card-img-top" alt="T-shirt">
+              <div class="card-overlay">
+                <h2>T-shirts</h2>
+              </div>
+            </div>
+          </div>
+
+          <div class=" col">
+            <div class="card">
+              <img src="images/jeans.png" class="card-img-top" alt="jeans" >
+              <div class="card-overlay">
+                <h2>Jeans</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>  
+
+    <a href="#category" class="up-icon"><i class="fa-solid fa-circle-chevron-up"></i></a>  
+
+    <!----------------------------------------------------------------------------------->
+    <img src="images/steps-line.png" style="width: 100%; height: 100%; overflow: hidden;">  
+    
+    <!----------------------------------------------------------------------------------->
+    <!--Filter Button-->
+    <div class = "filter-btns">
+      <a href="index.html"><button type="button" class="filter-btn" id="refresh"><i class="fa-solid fa-rotate" ></i> Refresh</button></a>
+      
+      <button type = "button" class = "filter-btn" id = "all">all</button>
+      <button type = "button" class = "filter-btn" id = "dress">Dresses</button><!--new-->
+      <button type = "button" class = "filter-btn" id = "top">Tops</button><!--office-wear-->
+      <button type = "button" class = "filter-btn" id = "t-shirts">T-shirts</button>
+      <button type = "button" class = "filter-btn" id = "jeans">Jeans & Denim</button><!--offers-->
+    </div>
+
+    <!--Product Cards-->
+    <section id="product-cards">
+      <div class="container-fluid">
+        <div class="row row-cols-2 row-cols-md-4 g-4">
+          
+          <div class=" col filter-item all dress">
+            <div class="card h-100">
+              <img src="images/dress1.png" class="card-img-top shop-item-image" alt="dresses">
+              <div class="card-body">
+                <h5 class="card-title shop-item-title">Sleevless Striped Sreen Dress</h5>
+                <p class="card-text shop-item-price"> 250.00 DHs</p>
+                <button type="button" style="width: 100%;" class="btn btn-primary mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class=" col filter-item all dress">
+            <div class="card h-100">
+              <img src="images/dress2.png" class="card-img-top shop-item-image" alt="dresses">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title shop-item-title">Blouse Neck Mini Printed Dress with Belt</h5>
+                <p class="card-text shop-item-price"> 450.00 DHs</p>
+                <button type="button" style="width: 100%;" class="btn btn-primary mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class=" col filter-item all dress">
+            <div class="card h-100">
+              <img src="images/dress3.png" class="card-img-top shop-item-image" alt="dresses">
+              <div class="card-body">
+                <h5 class="card-title shop-item-title">Vneck Long Sleeve Printed Mustard Dress with Belt</h5>
+                <p class="card-text shop-item-price"> 300.00 DHs</p>
+                <button type="button" style="width: 100%;" class="btn btn-primary mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class=" col filter-item all dress">
+            <div class="card h-100">
+              <img src="images/dress4.png" class="card-img-top shop-item-image " alt="dresses">
+              <div class="card-body">
+                <h5 class="card-title shop-item-title">Blouse Neck Half Sleeved Grey Dress</h5>
+                <p class="card-text shop-item-price"> 350.00 DHs</p>
+                <button type="button" style="width: 100%;" class="btn btn-primary mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class=" col filter-item all top ">
+            <div class="card h-100">
+              <img src="images/top1.png" class="card-img-top shop-item-image" alt="tops">
+              <div class="card-body">
+                <h5 class="card-title shop-item-title">Casual Salmon Blouse</h5>
+                <p class="card-text shop-item-price"> 250.00 DHs</p>
+                <button type="button" style="width: 100%;" class="btn btn-primary mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class=" col filter-item all top">
+            <div class="card h-100">
+              <img src="images/top2.png" class="card-img-top shop-item-image" alt="tops">
+              <div class="card-body">
+                <h5 class="card-title shop-item-title">Classy White Shoulders Transparent Blouse</h5>
+                <p class="card-text shop-item-price">400.00 DHs</p>
+                <button type="button" style="width: 100%;" class="btn btn-primary mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class=" col filter-item all top">
+            <div class="card h-100">
+              <img src="images/top3.png" class="card-img-top shop-item-image" alt="tops">
+              <div class="card-body">
+                <h5 class="card-title shop-item-title">Chic Bluesky Cardigan Top</h5>
+                <p class="card-text shop-item-price">Rs 3290.00</p>
+                <button type="button" style="width: 100%;" class="btn btn-primary mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class=" col filter-item all top">
+            <div class="card h-100">
+              <img src="images/top4.png" class="card-img-top shop-item-image" alt="tops">
+              <div class="card-body">
+                <h5 class="card-title shop-item-title">Medium Length Yellow Jacket with Belt</h5>
+                <p class="card-text shop-item-price">1000.00 DHs</p>
+                <button type="button" style="width: 100%;" class="btn btn-primary mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class=" col filter-item all t-shirts">
+            <div class="card h-100">
+              <img src="images/shirt1.png" class="card-img-top shop-item-image" alt="t-shirts">
+              <div class="card-body">
+                <h5 class="card-title shop-item-title">Chic Salmon Shirt</h5>
+                <p class="card-text shop-item-price">250.00 DHs</p>
+                <button type="button" style="width: 100%;" class="btn btn-primary mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class=" col filter-item all t-shirts">
+            <div class="card h-100">
+              <img src="images/shirt2.png" class="card-img-top shop-item-image" alt="t-shirts">
+              <div class="card-body">
+                <h5 class="card-title shop-item-title">Daily Argile Tshirt</h5>
+                <p class="card-text shop-item-price">200.00 DHs</p>
+                <button type="button" style="width: 100%;" class="btn btn-primary mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class=" col filter-item all t-shirts">
+            <div class="card h-100">
+              <img src="images/shirt3.png" class="card-img-top shop-item-image" alt="t-shirts">
+              <div class="card-body">
+                <h5 class="card-title shop-item-title">Casual Printed Black Tshirt</h5>
+                <p class="card-text shop-item-price">250.00 DHs</p>
+                <button type="button" style="width: 100%;" class="btn btn-primary mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class=" col filter-item all t-shirts">
+            <div class="card h-100">
+              <img src="images/shirt4.png" class="card-img-top shop-item-image" alt="t-shirts">
+              <div class="card-body">
+                <h5 class="card-title shop-item-title">Casual Printed White Tshirt</h5>
+                <p class="card-text shop-item-price">250.00 DHs</p>
+                <button type="button" style="width: 100%;" class="btn btn-primary mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class=" col filter-item all jeans">
+            <div class="card h-100">
+              <img src="images/jeans1.png" class="card-img-top shop-item-image" alt="jeans & denim">
+              <div class="card-body">
+                <h5 class="card-title shop-item-title">Light Denim Overalls Ripped in Knee</h5>
+                <p class="card-text shop-item-price">700.00 DHs</p>
+                <button type="button" style="width: 100%;" class="btn btn-primary mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class=" col filter-item all jeans">
+            <div class="card h-100">
+              <img src="images/jeans2.png" class="card-img-top shop-item-image" alt="jeans & denim">
+              <div class="card-body">
+                <h5 class="card-title shop-item-title">Long Sleeve Jeans Jacket</h5>
+                <p class="card-text shop-item-price">500.00 DHs</p>
+                <button type="button" style="width: 100%;" class="btn btn-primary mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping  " style="margin-right: 4%;"></i>Add To Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class=" col filter-item all jeans">
+            <div class="card h-100">
+              <img src="images/jeans3.png" class="card-img-top shop-item-image" alt="jeans & denim">
+              <div class="card-body">
+                <h5 class="card-title shop-item-title">High Waisted Denim Jeans</h5>
+                <p class="card-text shop-item-price">400.00 DHs</p>
+                <button type="button" style="width: 100%;" class="btn btn-primary mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class=" col filter-item all jeans">
+            <div class="card h-100">
+              <img src="images/jeans4.png" class="card-img-top shop-item-image" alt="jeans & denim">
+              <div class="card-body">
+                <h5 class="card-title shop-item-title">Fashionnable Multi Denim Jacket</h5>
+                <p class="card-text shop-item-price">750.00 DHs</p>
+                <button type="button" style="width: 100%;" class="btn btn-primary mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!--Shopping Cart-->
+    <section class="container content-section" id="shopping-cart">
+      
+      <h3 style="text-decoration: underline;text-align: center; margin-bottom: 7%;">Shopping Cart</h3>
+    
+    <table class="table table-hover table-cart">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Price</th>
+          <th>Quantity</th>
+        </tr>
+      </thead>
+      <tbody class="cart-items">      
+        
+      </tbody>
+    </table>
+
+        <div class="cart-total"> 
+          <strong class="cart-total-title">Total</strong>
+          <span  class="cart-total-price" style="text-align: right;">DHs</span>
+        </div>
+    
+
+        <div class="btn-purchase" style="margin-top: 10%;">
+          <button type="button"  class="btn btn-dark btn-purchase "><i class="fa-solid fa-cart-shopping " style="margin-right: 6%;"></i>PURCHASE</button>
+        </div>
+
+    </section>
+    
+    <!--Footer-->
+    <section id="footer">
+      <div class="card text-center">
+      
+        <div class="card-body">
+          <h3 class="card-title"><i class="fa-solid fa-gift" style="margin-right: 1%;"></i>Manal & Rach</h3>
+          <p>Thanks for your visit , Come Again !</p>
+        </div>
+        <div class="card-footer text-muted">
+          <p></p>
+          <p></p>
+        </div>
+      </div>
+    </section>  
+
+    <!--External JS-->
+    <script src="script.js"></script>
+
+  </body>
+</html>
