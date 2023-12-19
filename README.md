@@ -27,7 +27,6 @@ Built with:
 ![image](https://github.com/Manal-Lahmidi/js-Shopping-Cart/assets/129679210/7fe3441e-b396-4979-bedd-408baea3f712)
 ![image](https://github.com/Manal-Lahmidi/js-Shopping-Cart/assets/129679210/de90c24b-6764-4a5d-839a-1fbe84120615)
 ![image](https://github.com/Manal-Lahmidi/js-Shopping-Cart/assets/129679210/886e8f95-9e56-449b-a1cb-d877629d5f20)
-
-
+[try app](https://js-cart-shopping.netlify.app/)
 
 
